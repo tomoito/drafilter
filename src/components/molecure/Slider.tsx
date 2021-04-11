@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { filterKokoro1, filterKokoro2, filterKokoro3 } from "features/userSlice";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Button from "components/atom/Button";
 
 const SimpleSlider = () => {
   const settings = {
@@ -12,7 +13,7 @@ const SimpleSlider = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 4,
   };
   const style = {
     margin: 10,
@@ -31,12 +32,30 @@ const SimpleSlider = () => {
     distPatch(filterKokoro3());
   };
   return (
-    <div className="w-full h-16 bg-gray-200 ">
+    <div className="w-full h-12  ">
       <Slider {...settings}>
-        <div className="  items-center text-2xl text-center h-16">
-          <h3 className="h-full">1</h3>
+        <div className="  items-center text-2xl text-center h-10" onClick={handleClick2}>
+          <Button name="メラ" />
         </div>
-        <div onClick={handleClick1}>
+        <div className="  items-center text-2xl text-center h-10" onClick={handleClick1}>
+          <Button name="メラ" />
+        </div>
+        <div className="  items-center text-2xl text-center h-10" onClick={handleClick3}>
+          <Button name="メラ" />
+        </div>
+        <div className="  items-center text-2xl text-center h-10" onClick={handleClick2}>
+          <Button name="メラ" />
+        </div>
+        <div className="  items-center text-2xl text-center h-10">
+          <Button name="メラ" />
+        </div>
+        <div className="  items-center text-2xl text-center h-10">
+          <Button name="メラ" />
+        </div>
+        <div className="  items-center text-2xl text-center h-full">
+          <Button name="ohge" />
+        </div>
+        <div onClick={handleClick1} className="h-full">
           <h3>12</h3>
         </div>
         <div onClick={handleClick1}>
