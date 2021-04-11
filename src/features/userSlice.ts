@@ -18,6 +18,7 @@ type initialType = {
   allkokoro: {
     [id in string]: kokoro;
   };
+  dispKokoro: string[];
 };
 
 const initialState: initialType = {
@@ -25,6 +26,7 @@ const initialState: initialType = {
   name: null,
   flg: false,
   allkokoro: kokoroList,
+  dispKokoro: [],
 };
 
 export const userSlice = createSlice({
@@ -37,9 +39,34 @@ export const userSlice = createSlice({
     changeFlg(state) {
       state.flg = !state.flg;
     },
+    filterKokoro1(state) {
+      const colorFiltered = Object.keys(state.allkokoro).filter(i =>
+        ["青"].includes(state.allkokoro[i].color),
+      );
+      state.dispKokoro = colorFiltered;
+    },
+    filterKokoro2(state) {
+      const colorFiltered = Object.keys(state.allkokoro).filter(i =>
+        ["赤"].includes(state.allkokoro[i].color),
+      );
+      state.dispKokoro = colorFiltered;
+    },
+    filterKokoro3(state) {
+      const colorFiltered = Object.keys(state.allkokoro).filter(i =>
+        ["緑"].includes(state.allkokoro[i].color),
+      );
+      state.dispKokoro = colorFiltered;
+    },
   },
 });
 
-export const { changeName, changeFlg } = userSlice.actions;
+export const {
+  changeName,
+  changeFlg,
+  filterKokoro1,
+  filterKokoro2,
+  filterKokoro3,
+} = userSlice.actions;
 export const selectUser = (state: RootState) => state.user;
 export const selectAll = (state: RootState) => state.user.allkokoro;
+export const filterAll = (state: RootState) => state.user.dispKokoro;
