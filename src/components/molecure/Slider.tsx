@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SimpleSlider = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -16,7 +16,7 @@ const SimpleSlider = () => {
   };
   const style = {
     margin: 10,
-    height: 50,
+    height: 150,
     color: "#fff",
     background: "#3ab60b",
   };
@@ -31,10 +31,10 @@ const SimpleSlider = () => {
     distPatch(filterKokoro3());
   };
   return (
-    <div className="w-full bg-gray-200">
+    <div className="w-full h-16 bg-gray-200 ">
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
+        <div className="  items-center text-2xl text-center h-16">
+          <h3 className="h-full">1</h3>
         </div>
         <div onClick={handleClick1}>
           <h3>12</h3>
@@ -42,7 +42,7 @@ const SimpleSlider = () => {
         <div onClick={handleClick1}>
           <h3>13</h3>
         </div>
-        <div>
+        <div className="  items-center text-2xl text-center h-16">
           <h3>4</h3>
         </div>
         <div>
