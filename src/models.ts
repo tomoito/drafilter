@@ -21,3 +21,10 @@ export type kokoro = typeKokoroBefore<status, "option", "color", colorKind>;
 export type kokoroAllList = {
   [id in string]: kokoro;
 };
+
+// Option
+type PickType<T, K extends keyof T> = T[K];
+export type optionFilterBefore = PickType<status, "option">;
+type PickTypeBase<T, TYPE> = { [P in keyof T]: TYPE };
+export type optionFilter = PickTypeBase<optionFilterBefore, boolean>;
+export type optionKind = keyof optionFilter;
