@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectUser, changeFlg, changeName } from "features/userSlice";
 import SimpleSlider from "./molecure/Slider";
+import SliderNone from "./molecure/SliderNone";
 
 const HeaderSticky = () => {
   const distPatch = useDispatch();
@@ -18,7 +19,8 @@ const HeaderSticky = () => {
       <p>{select.id}</p>
       <p>{select.name}</p>
       <p>{select.flg == true ? "true" : "false"}</p> */}
-      <SimpleSlider />
+      <SliderNone />
+      {/* <SimpleSlider /> */}
     </div>
   );
 };
