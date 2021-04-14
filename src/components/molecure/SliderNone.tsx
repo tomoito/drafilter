@@ -31,7 +31,7 @@ const SliderNone = () => {
   };
 
   return (
-    <div className="flex flex-row w-screen overflow-x-scroll  ">
+    <div className="flex flex-row w-screen overflow-x-scroll overflow-y-visible ">
       <div
         className="flex-shrink-0  items-center text-2xl text-center h-10 transform duration-300 hover:scale-125 hover:bg-gray-300"
         onClick={handleClick1}>
