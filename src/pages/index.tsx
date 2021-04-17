@@ -71,7 +71,8 @@ export default function Home() {
 
         {/* BODY */}
         <div className="flex flex-col md:flex-row">
-          {/* <FilterKind /> */}
+          <FilterKind />
+          <p>hoge</p>
           {/* <FilterResult title={Bougu_list} pic_folder={"pic_bougu"} /> */}
           {/* <FilterResult title={Acuse_list} pic_folder={"pic_acuse"} /> */}
           {/* <Tablist

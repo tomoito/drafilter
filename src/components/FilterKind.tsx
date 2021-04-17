@@ -4,7 +4,7 @@ const FilterItem = ["頭", "上着", "下", "盾", "アクセサリー", "ここ
 
 const FilterKind = () => {
   return (
-    <div className="border-b ">
+    <div className="border-b hidden">
       <p className="font-mono text-base text-center">Filter</p>
 
       <ul className="flex flex-row md:flex-col whitespace-nowrap">
