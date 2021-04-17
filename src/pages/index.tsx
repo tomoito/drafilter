@@ -2,6 +2,7 @@ import Filter from "components/Filter";
 import FilterKind from "components/FilterKind";
 import FilterResult from "components/FilterResult";
 import Header from "components/Header";
+import Hoge from "components/Hoge";
 import Tablist from "components/Tablist";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -73,21 +74,36 @@ export default function Home() {
           {/* <FilterKind /> */}
           {/* <FilterResult title={Bougu_list} pic_folder={"pic_bougu"} /> */}
           {/* <FilterResult title={Acuse_list} pic_folder={"pic_acuse"} /> */}
-          <Tablist
-            title={["防具", "アクセサリー", "こころ"]}
+          {/* <Tablist
+            title={["hoge", "アクセサリー", "こころ", "hoge3"]}
             content={[
               <FilterResult
-                title={"hoge1"}
+                title={"hoge"}
+                title2={Bougu_list}
+                pic_folder={"pic_bougu"}
+              />,
+              <p title={"hoge3"}>hoge3hoge3</p>,
+            ]}
+          /> */}
+          {/* <Tablist
+            title={["hoge", "hoge2"]}
+            content={[<p title={"hoge"}>aiueo</p>, <p title={"hoge2"}>hoghoge</p>]}
+          /> */}
+          <Tablist
+            title={["Tab1", "Tab2", "Tab3", "Tab4"]}
+            content={[
+              <Hoge title={"Tab1"} />,
+              <p title={"Tab2"} />,
+              <FilterResult
+                title={"Tab3"}
                 title2={Bougu_list}
                 pic_folder={"pic_bougu"}
               />,
               <FilterResult
-                title={"hoge2"}
+                title={"Tab4"}
                 title2={Acuse_list}
                 pic_folder={"pic_acuse"}
               />,
-              ,
-              <p title={"hoge3"}>hoge3hoge3</p>,
             ]}
           />
         </div>

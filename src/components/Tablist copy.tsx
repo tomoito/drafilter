@@ -5,7 +5,7 @@ type prop = {
   content: JSX.Element[];
 };
 
-const Tablist: FC<prop> = ({ title, content }) => {
+const Tablist1: FC<prop> = ({ title, content }) => {
   const randomStr = () => Math.random().toString(32).substring(2);
   const randomId: { current: string[] } = useRef([]);
   const renderCount: { current: number } = useRef(0);
@@ -72,7 +72,7 @@ const Tablist: FC<prop> = ({ title, content }) => {
           <li
             role="presentation"
             key={randomId.current[index]}
-            className="p-3 font-bold text-base hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            className="p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
             <a
               href={`#${randomId.current[index]}`}
               tabIndex={tabState === randomId.current[index] ? 0 : -1}
@@ -101,4 +101,4 @@ const Tablist: FC<prop> = ({ title, content }) => {
   );
 };
 
-export default Tablist;
+export default Tablist1;

@@ -11,6 +11,7 @@ type Props = {
 const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
   return (
     <div>
+      {/* {title} */}
       <div className="flex flex-wrap">
         {title2.map((i: any) => (
           <div className="p-2">
