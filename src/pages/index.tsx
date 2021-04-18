@@ -3,6 +3,7 @@ import FilterKind from "components/FilterKind";
 import FilterResult from "components/FilterResult";
 import Header from "components/Header";
 import Hoge from "components/Hoge";
+import TabKind from "components/TabKind";
 import Tablist from "components/Tablist";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -106,6 +107,7 @@ export default function Home() {
               />,
             ]}
           /> */}
+          <TabKind />
         </div>
 
         {/* BODY NAV */}
