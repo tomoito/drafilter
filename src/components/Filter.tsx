@@ -1,5 +1,5 @@
 import React from "react";
-// import FilterList from "./molecure/FilterList";
+import FilterItem from "./molecure/FilterItem";
 
 const FilterItem_skill = [
   "斬撃対技アップ",
@@ -30,10 +30,18 @@ const Filter = () => {
           こころ、防具、アクセサリーの特殊効果をフィルタリングします。
         </p>
       </div>
-      <div className=" mb-1">{/* <FilterList title={FilterItem_skill} /> */}</div>
-      <div className=" mb-1">{/* <FilterList title={FilterItem_taisei} /> */}</div>
-      <div className=" mb-1">{/* <FilterList title={FilterItem_taisei} /> */}</div>
-      <div className=" mb-3">{/* <FilterList title={FilterItem_color} /> */}</div>
+      <div className=" mb-1">
+        <FilterItem title={FilterItem_skill} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={FilterItem_taisei} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={FilterItem_taisei} />
+      </div>
+      <div className=" mb-3">
+        <FilterItem title={FilterItem_color} />
+      </div>
     </div>
   );
 };

@@ -71,42 +71,7 @@ export default function Home() {
         {/* END HEADER */}
 
         {/* BODY */}
-        <div className="flex flex-col md:flex-row">
-          <FilterKind />
-          {/* <p>hoge</p> */}
-          {/* <FilterResult title={Bougu_list} pic_folder={"pic_bougu"} /> */}
-          {/* <FilterResult title={Acuse_list} pic_folder={"pic_acuse"} /> */}
-          {/* <Tablist
-            title={["hoge", "アクセサリー", "こころ", "hoge3"]}
-            content={[
-              <FilterResult
-                title={"hoge"}
-                title2={Bougu_list}
-                pic_folder={"pic_bougu"}
-              />,
-              <p title={"hoge3"}>hoge3hoge3</p>,
-            ]}
-          /> */}
-          {/* <Tablist
-            title={["hoge", "hoge2"]}
-            content={[<p title={"hoge"}>aiueo</p>, <p title={"hoge2"}>hoghoge</p>]}
-          /> */}
-          {/* <Tablist
-            title={["tab1", "Tab2", "Tab3", "Tab4"]}
-            content={[
-              <Hoge title={"tab1"} />,
-              <FilterResult
-                title={"Tab2"}
-                title2={Bougu_list}
-                pic_folder={"pic_bougu"}
-              />,
-              <FilterResult
-                title={"Tab3"}
-                title2={Acuse_list}
-                pic_folder={"pic_acuse"}
-              />,
-            ]}
-          /> */}
+        <div className="">
           <TabKind />
         </div>
 

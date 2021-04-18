@@ -1,6 +1,8 @@
 import React from "react";
 import FilterResult from "./FilterResult";
 
+const FilterItem = ["頭", "上着", "下", "盾", "アクセサリー", "こころ"];
+
 const Bougu_list: any = [
   { pic: "1_bougu.png", title: "hoge1" },
   { pic: "2_bougu.png", title: "hoge2" },
@@ -50,13 +52,15 @@ const TabKind = () => {
   const color = "black";
   return (
     <>
-      <div className="flex flex-wrap">
-        <div className="w-full">
-          <ul className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row" role="tablist">
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+      <div className="flex w-full">
+        <div className=" flex-col flex md:flex-row ">
+          <ul
+            className="flex flex-row md:flex-col w-max  flex-nowrap  md:h-screen md:space-y-4 space-y-0"
+            role="tablist">
+            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "p-3 font-bold text-base cursor-pointer " +
                   (openTab === 1 ? "text-white bg-green-400" : "text-black bg-white")
                 }
                 onClick={e => {
@@ -66,13 +70,13 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link1"
                 role="tablist">
-                Profile
+                頭
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "p-3 font-bold text-base cursor-pointer" +
                   (openTab === 2 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -82,16 +86,14 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link2"
                 role="tablist">
-                Settings
+                たて
               </a>
             </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 3
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                  "p-3 font-bold text-base   " +
+                  (openTab === 3 ? "text-white bg-gray-500" : " text-green-400 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -100,32 +102,31 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link3"
                 role="tablist">
-                Options
+                アクセサリー
               </a>
             </li>
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-            <div className="px-4 py-5 flex-auto">
+
+          <div className=" flex flex-col bg-yellow-200  mb-6 shadow-lg rounded">
+            <div className="px-2 py-5">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
+                <div
+                  className={openTab === 1 ? " inline-flex w-full" : "hidden"}
+                  id="link1">
                   <FilterResult
                     title={"hoge"}
                     title2={Bougu_list}
                     pic_folder={"pic_bougu"}
                   />
                 </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                    Completely synergize resource taxing relationships via premier niche
-                    markets. Professionally cultivate one-to-one customer service with
-                    robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for state of
-                    the art customer service.
-                  </p>
+                <div className={openTab === 2 ? " inline-flex" : "hidden"} id="link2">
+                  <FilterResult
+                    title={"hoge"}
+                    title2={Acuse_list}
+                    pic_folder={"pic_acuse"}
+                  />
                 </div>
-                <div className={openTab === 3 ? "block" : "hidden"} id="link3">
+                <div className={openTab === 3 ? " inline-flex" : "hidden"} id="link3">
                   <p>
                     Efficiently unleash cross-media information without cross-media value.
                     Quickly maximize timely deliverables for real-time schemas.
