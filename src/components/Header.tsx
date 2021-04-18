@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import HeaderIcon from "./atom/HeaderIcon";
 import { GlobeIcon, ReceiptRefundIcon, ReceiptTaxIcon } from "@heroicons/react/solid";
-import SimpleSlider from "./molecure/Slider";
 
 const Header = () => {
   return (
