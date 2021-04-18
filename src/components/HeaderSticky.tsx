@@ -19,7 +19,7 @@ const HeaderSticky = () => {
       <p>{select.id}</p>
       <p>{select.name}</p>
       <p>{select.flg == true ? "true" : "false"}</p> */}
-      <SliderNone />
+      {/* <SliderNone /> */}
       {/* <SimpleSlider /> */}
     </div>
   );
