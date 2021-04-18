@@ -7,7 +7,7 @@ type Props = {
 const FilterList: React.FC<Props> = ({ title }) => {
   return (
     <div className="w-screen overflow-x-scroll  rounded-lg">
-      {/* <ul className="flex p-2 text-base font-mono text-white space-x-4  whitespace-nowrap">
+      <ul className="flex p-2 text-base font-mono text-white space-x-4  whitespace-nowrap">
         {title.map(i => (
           <li
             key={i}
@@ -15,7 +15,7 @@ const FilterList: React.FC<Props> = ({ title }) => {
             <p>{i}</p>
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };

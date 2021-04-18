@@ -90,7 +90,7 @@ export default function Home() {
             title={["hoge", "hoge2"]}
             content={[<p title={"hoge"}>aiueo</p>, <p title={"hoge2"}>hoghoge</p>]}
           /> */}
-          <Tablist
+          {/* <Tablist
             title={["tab1", "Tab2", "Tab3", "Tab4"]}
             content={[
               <Hoge title={"tab1"} />,
@@ -105,7 +105,7 @@ export default function Home() {
                 pic_folder={"pic_acuse"}
               />,
             ]}
-          />
+          /> */}
         </div>
 
         {/* BODY NAV */}
