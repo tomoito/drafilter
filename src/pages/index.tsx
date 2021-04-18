@@ -72,7 +72,7 @@ export default function Home() {
         {/* BODY */}
         <div className="flex flex-col md:flex-row">
           <FilterKind />
-          <p>hoge</p>
+          {/* <p>hoge</p> */}
           {/* <FilterResult title={Bougu_list} pic_folder={"pic_bougu"} /> */}
           {/* <FilterResult title={Acuse_list} pic_folder={"pic_acuse"} /> */}
           {/* <Tablist
@@ -91,17 +91,16 @@ export default function Home() {
             content={[<p title={"hoge"}>aiueo</p>, <p title={"hoge2"}>hoghoge</p>]}
           /> */}
           <Tablist
-            title={["Tab1", "Tab2", "Tab3", "Tab4"]}
+            title={["tab1", "Tab2", "Tab3", "Tab4"]}
             content={[
-              <Hoge title={"Tab1"} />,
-              <p title={"Tab2"} />,
+              <Hoge title={"tab1"} />,
               <FilterResult
-                title={"Tab3"}
+                title={"Tab2"}
                 title2={Bougu_list}
                 pic_folder={"pic_bougu"}
               />,
               <FilterResult
-                title={"Tab4"}
+                title={"Tab3"}
                 title2={Acuse_list}
                 pic_folder={"pic_acuse"}
               />,

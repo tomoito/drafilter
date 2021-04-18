@@ -14,7 +14,7 @@ const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
       {/* {title} */}
       <div className="flex flex-wrap">
         {title2.map((i: any) => (
-          <div className="p-2">
+          <div key={i.title} className="p-2">
             {/* <img src={i.pic} alt="" /> */}
             <img className="h-20 w-auto" src={`images/${pic_folder}/${i.pic}`} alt="" />
             <p>{i.title}</p>
