@@ -1,55 +1,30 @@
 import React from "react";
 import FilterResult from "./FilterResult";
 
+import {
+  selectBougu,
+  selectBouguAll,
+  filterBouguAll,
+  filterAtama,
+  filtertate,
+  filterYoroiSita,
+  filterYoroiUe,
+  filterAcuse,
+} from "features/bouguSlice";
+import { useSelector } from "react-redux";
+
 const FilterItem = ["頭", "上着", "下", "盾", "アクセサリー", "こころ"];
 
-const Bougu_list: any = [
-  { pic: "1_bougu.png", title: "hoge1" },
-  { pic: "2_bougu.png", title: "hoge2" },
-  { pic: "3_bougu.png", title: "hoge3" },
-  { pic: "4_bougu.png", title: "hoge4" },
-  { pic: "1_bougu.png", title: "hoge1" },
-  { pic: "2_bougu.png", title: "hoge2" },
-  { pic: "3_bougu.png", title: "hoge3" },
-  { pic: "4_bougu.png", title: "hoge4" },
-  { pic: "1_bougu.png", title: "hoge1" },
-  { pic: "2_bougu.png", title: "hoge2" },
-  { pic: "3_bougu.png", title: "hoge3" },
-  { pic: "4_bougu.png", title: "hoge4" },
-  { pic: "1_bougu.png", title: "hoge1" },
-  { pic: "2_bougu.png", title: "hoge2" },
-  { pic: "3_bougu.png", title: "hoge3" },
-  { pic: "4_bougu.png", title: "hoge4" },
-];
-const Acuse_list: any = [
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-  { pic: "1_ac.png", title: "アクセサリー１" },
-  { pic: "2_ac.png", title: "ロトのしるし" },
-  { pic: "3_ac.png", title: "王合流の印" },
-  { pic: "4_ac.png", title: "虹色のリング" },
-];
 const TabKind = () => {
   const [openTab, setOpenTab] = React.useState(1);
   const color = "black";
+
+  const dispAcuseSelector = useSelector(filterAcuse);
+  const dispAtamaSelector = useSelector(filterAtama);
+  const dispTateSelector = useSelector(filtertate);
+  const dispYoroiUeSelector = useSelector(filterYoroiUe);
+  const dispYoroiSitaSelector = useSelector(filterYoroiSita);
+
   return (
     <>
       <div className="flex w-full">
@@ -92,15 +67,47 @@ const TabKind = () => {
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base   " +
-                  (openTab === 3 ? "text-white bg-gray-500" : " text-green-400 bg-white")
+                  "p-3 font-bold text-base cursor-pointer" +
+                  (openTab === 5 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
-                  setOpenTab(3);
+                  setOpenTab(5);
                 }}
                 data-toggle="tab"
-                href="#link3"
+                href="#link5"
+                role="tablist">
+                鎧下
+              </a>
+            </li>
+            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+              <a
+                className={
+                  "p-3 font-bold text-base   " +
+                  (openTab === 4 ? "text-white bg-gray-500" : " text-green-400 bg-white")
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  setOpenTab(4);
+                }}
+                data-toggle="tab"
+                href="#link4"
+                role="tablist">
+                鎧上
+              </a>
+            </li>
+            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+              <a
+                className={
+                  "p-3 font-bold text-base cursor-pointer" +
+                  (openTab === 6 ? "text-white bg-green-400" : " text-black bg-white")
+                }
+                onClick={e => {
+                  e.preventDefault();
+                  setOpenTab(6);
+                }}
+                data-toggle="tab"
+                href="#link6"
                 role="tablist">
                 アクセサリー
               </a>
@@ -115,14 +122,35 @@ const TabKind = () => {
                   id="link1">
                   <FilterResult
                     title={"hoge"}
-                    title2={Bougu_list}
+                    title2={dispAtamaSelector}
                     pic_folder={"pic_bougu"}
                   />
                 </div>
                 <div className={openTab === 2 ? " inline-flex" : "hidden"} id="link2">
                   <FilterResult
                     title={"hoge"}
-                    title2={Acuse_list}
+                    title2={dispTateSelector}
+                    pic_folder={"pic_bougu"}
+                  />
+                </div>
+                <div className={openTab === 4 ? " inline-flex" : "hidden"} id="link4">
+                  <FilterResult
+                    title={"hoge"}
+                    title2={dispYoroiUeSelector}
+                    pic_folder={"pic_bougu"}
+                  />
+                </div>
+                <div className={openTab === 5 ? " inline-flex" : "hidden"} id="link5">
+                  <FilterResult
+                    title={"hoge"}
+                    title2={dispYoroiSitaSelector}
+                    pic_folder={"pic_bougu"}
+                  />
+                </div>
+                <div className={openTab === 6 ? " inline-flex" : "hidden"} id="link6">
+                  <FilterResult
+                    title={"hoge"}
+                    title2={dispAcuseSelector}
                     pic_folder={"pic_acuse"}
                   />
                 </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Tablist from "./Tablist";
+import { useSelector } from "react-redux";
+import { selectBouguAll } from "features/bouguSlice";
 
 type Props = {
   title: string;
@@ -9,15 +10,19 @@ type Props = {
 };
 
 const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
+  const bouguSelector = useSelector(selectBouguAll);
   return (
     <div className=" w-full">
       {/* {title} */}
       <div className="flex flex-wrap">
-        {title2.map((i: any) => (
-          <div key={i.title} className="p-2">
-            {/* <img src={i.pic} alt="" /> */}
-            <img className="h-20 w-auto" src={`images/${pic_folder}/${i.pic}`} alt="" />
-            <p>{i.title}</p>
+        {title2.map((i: string) => (
+          <div key={i} className="p-2">
+            <img
+              className="h-20 w-auto"
+              src={`images/${pic_folder}/${bouguSelector[i].pic}`}
+              alt=""
+            />
+            <p>{bouguSelector[i].pic}</p>{" "}
           </div>
         ))}
       </div>

@@ -2,7 +2,11 @@ import React from "react";
 import Image from "next/image";
 import { GlobeIcon, ReceiptRefundIcon, ReceiptTaxIcon } from "@heroicons/react/solid";
 
+import { selectBougu } from "features/bouguSlice";
+import { useSelector } from "react-redux";
+
 const Header = () => {
+  const selector = useSelector(selectBougu);
   return (
     <div className=" bg-green-300 w-full">
       <div className="flex flex-row justify-between">
