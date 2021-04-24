@@ -22,7 +22,7 @@ const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
               src={`images/${pic_folder}/${bouguSelector[i].pic}`}
               alt=""
             />
-            <p>{bouguSelector[i].pic}</p>{" "}
+            {/* <p>{bouguSelector[i].pic}</p>{" "} */}
           </div>
         ))}
       </div>
