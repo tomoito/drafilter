@@ -19,7 +19,7 @@ const FilterItem: React.FC<Props> = ({ title }) => {
       {title.map(i => (
         <div
           onClick={() => handleClick(i)}
-          className=" bg-yellow-100 text-base flex rounded-lg w-30 h-10 p-3 text-center items-center transform duration-150 hover:scale-110 hover:bg-gray-500 cursor-pointer mb-2">
+          className=" bg-yellow-100 text-xs flex rounded-lg w-30 h-auto p-1 text-center items-center transform duration-150 hover:scale-110 hover:bg-gray-500 cursor-pointer mb-2">
           <p className="text-center">{i}</p>
         </div>
       ))}
