@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const selector = useSelector(selectBougu);
   return (
-    <div className=" bg-green-300 w-full">
+    <div className=" bg-green-300 w-screen">
       <div className="flex flex-row justify-between">
         {/* LEFT HEADER */}
         <div className="flex mx-4 my-5 items-center">

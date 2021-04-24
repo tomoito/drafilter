@@ -26,7 +26,6 @@ const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
           </div>
         ))}
       </div>
-      <p>FilterResult</p>
 
       {/* <Tabs>
         <TabList>

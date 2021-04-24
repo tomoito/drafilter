@@ -27,10 +27,10 @@ const TabKind = () => {
 
   return (
     <>
-      <div className="flex w-full">
-        <div className=" flex-col flex md:flex-row ">
+      <div className="flex w-screen">
+        <div className=" flex-col flex md:flex-row overflow-hidden ">
           <ul
-            className="flex flex-row md:flex-col w-max  flex-nowrap  md:h-screen md:space-y-4 space-y-0"
+            className="flex overflow-x-scroll flex-row md:flex-col w-max  flex-nowrap  md:h-screen md:space-y-4 space-y-0"
             role="tablist">
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
@@ -114,7 +114,7 @@ const TabKind = () => {
             </li>
           </ul>
 
-          <div className=" flex flex-col bg-yellow-200  mb-6 shadow-lg rounded">
+          <div className=" flex flex-col  mb-6 shadow-lg rounded">
             <div className="px-2 py-5">
               <div className="tab-content tab-space">
                 <div
