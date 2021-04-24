@@ -18,7 +18,7 @@ const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
         {title2.map((i: string) => (
           <div key={i} className="p-2">
             <img
-              className="h-20 w-auto"
+              className=" h-16 w-auto"
               src={`images/${pic_folder}/${bouguSelector[i].pic}`}
               alt=""
             />
