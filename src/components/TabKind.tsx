@@ -30,12 +30,12 @@ const TabKind = () => {
       <div className="flex w-screen">
         <div className=" flex-col flex md:flex-row md:overflow-auto overflow-hidden md:w-full ">
           <ul
-            className="flex flex-row md:flex-col md:max-w-min flex-nowrap  md:h-screen md:space-y-4 space-y-0"
+            className="flex flex-row md:flex-col md:max-w-min flex-nowrap overflow-scroll md:w-full  md:h-screen md:space-y-4 space-y-0"
             role="tablist">
-            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            <li className="w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base cursor-pointer " +
+                  "p-3 font-bold text-xs cursor-pointer " +
                   (openTab === 1 ? "text-white bg-green-400" : "text-black bg-white")
                 }
                 onClick={e => {
@@ -48,10 +48,10 @@ const TabKind = () => {
                 頭:{dispAtamaSelector.length}
               </a>
             </li>
-            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base cursor-pointer" +
+                  "p-3 font-bold text-xs cursor-pointer" +
                   (openTab === 2 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -61,13 +61,13 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link2"
                 role="tablist">
-                たて:{dispTateSelector.length}
+                盾:{dispTateSelector.length}
               </a>
             </li>
-            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base cursor-pointer" +
+                  "p-3 font-bold text-xs cursor-pointer" +
                   (openTab === 5 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -80,11 +80,11 @@ const TabKind = () => {
                 鎧下:{dispYoroiSitaSelector.length}
               </a>
             </li>
-            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base   " +
-                  (openTab === 4 ? "text-white bg-gray-500" : " text-green-400 bg-white")
+                  "p-3 font-bold text-xs   " +
+                  (openTab === 4 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -96,10 +96,10 @@ const TabKind = () => {
                 鎧上:{dispYoroiUeSelector.length}
               </a>
             </li>
-            <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
+            <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-base cursor-pointer" +
+                  "p-3 font-bold text-xs cursor-pointer" +
                   (openTab === 6 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -109,7 +109,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link6"
                 role="tablist">
-                アクセサリー:{dispAcuseSelector.length}
+                アクセ:{dispAcuseSelector.length}
               </a>
             </li>
           </ul>
