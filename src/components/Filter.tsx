@@ -47,15 +47,35 @@ const FilterItem_bougu: bouguKind[] = [
   "究極エビルプリーストへの耐性",
 ];
 const FilterItem_test3: bouguKind[] = ["鳥系への耐性", "植物系への耐性", "ギラ属性耐性"];
-const FilterItem_test: bouguKind[] = [
+const FilterItem_joutaiijou_taisei: bouguKind[] = [
   "毒耐性",
-  "ギラ属性とくぎダメージ",
-  "悪魔系への耐性",
-  "斬撃・体技耐性",
-  "不利な状態変化耐性",
-  "ドラゴン系への耐性",
-  "【バトマス】攻撃力",
+  "封印耐性",
+  "魅了耐性",
+  "防御減耐性",
+  "転び耐性",
+  "踊り耐性",
+  "眠り耐性",
+  "混乱耐性",
+  "怯え耐性",
+  "幻惑耐性",
+  "封印耐性",
+  "守備減耐性",
+  "呪い耐性",
+  "即死耐性",
+  "すばやさ減耐性",
 ];
+
+const FilterItem_zokusei_up: bouguKind[] = [
+  "メラ属性ダメージ",
+  "メラ属性とくぎダメージ",
+  "メラ属性じゅもんダメージ",
+  "メラ属性耐性",
+  "バギ属性ダメージ",
+  "バギ属性とくぎダメージ",
+  "バギ属性じゅもんダメージ",
+  "バギ属性耐性",
+];
+
 const FilterItem_test2: bouguKind[] = [
   "暴嵐の四天王への耐性",
   "【スパスタ】とくぎHP回復効果",
@@ -92,7 +112,16 @@ const Filter = () => {
         <FilterItem title={Filter_zokusei_taisei} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={FilterItem_test} />
+        <FilterItem title={Filter_status} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={Filter_zokusei_attack} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={Filter_zokusei_taisei} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={FilterItem_joutaiijou_taisei} />
       </div>
       <div className=" mb-1">
         <FilterItem title={FilterItem_test2} />
