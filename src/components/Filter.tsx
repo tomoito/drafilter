@@ -6,6 +6,41 @@ import { filterBougu, optionChange, selectBougu } from "features/bouguSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Badge from "./atom/Badge";
 
+const Filter_status: bouguKind[] = [
+  "攻撃力",
+  "守備力",
+  "攻撃魔力",
+  "すばやさ",
+  "きようさ",
+  "さいだいHP",
+  "さいだいMP",
+  "【バトマス】スキルの斬撃ダメージ",
+  "【パラディン】守備力",
+  "【レンジャー】スキルの体技ダメージ",
+  "【賢者】とくぎHP回復効果",
+  "【賢者】スキルHP回復効果",
+];
+
+const Filter_zokusei_attack: bouguKind[] = [
+  "悪魔系へのダメージ",
+  "ドラゴン系へのダメージ",
+  "植物系へのダメージ",
+  "鳥系へのダメージ",
+];
+
+const Filter_zokusei_taisei: bouguKind[] = [
+  "鳥系への耐性",
+  "究極エビルプリーストへの耐性",
+  "虫系への耐性",
+  "物質系への耐性",
+  "水系への耐性",
+  "植物系への耐性",
+  "悪魔系への耐性",
+  "怪人系への耐性",
+  "マシン系への耐性",
+  "ドラゴン系への耐性",
+];
+
 const FilterItem_bougu: bouguKind[] = [
   "すばやさ",
   "攻撃魔力",
@@ -51,10 +86,10 @@ const Filter = () => {
         </p>
       </div>
       <div className=" mb-1">
-        <FilterItem title={FilterItem_test3} />
+        <FilterItem title={Filter_zokusei_attack} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={FilterItem_bougu} />
+        <FilterItem title={Filter_zokusei_taisei} />
       </div>
       <div className=" mb-1">
         <FilterItem title={FilterItem_test} />
