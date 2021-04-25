@@ -4,6 +4,7 @@ import { optionFilter, acuseKind, acuse } from "models";
 import { bouguKind } from "models";
 import { filterBougu, optionChange, selectBougu } from "features/bouguSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Badge from "./atom/Badge";
 
 const FilterItem_bougu: bouguKind[] = [
   "すばやさ",
@@ -62,10 +63,10 @@ const Filter = () => {
         <FilterItem title={FilterItem_test2} />
       </div>
 
-      <div>
+      <div className="flex space-x-1">
         {selector.map(i => (
-          <div key={i} onClick={() => handleClick(i)}>
-            <p>{i}</p>
+          <div key={i}>
+            <Badge id={i} handleChangeBase={() => handleClick(i)}></Badge>
           </div>
         ))}
       </div>

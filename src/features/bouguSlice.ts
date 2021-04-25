@@ -4,8 +4,10 @@ import { kokoro, BouguAllList, optionFilter, bouguKind, bougu } from "models";
 import bouguAll from "../../public/images/Testdata/bougu_issiki.json";
 
 const bouguList = bouguAll as BouguAllList;
+const bouguKey = Object.keys(bouguAll);
 
 type initialType = {
+  modalOpen: boolean;
   option: bouguKind[];
   allBougu: {
     [id in string]: bougu;
@@ -14,15 +16,19 @@ type initialType = {
 };
 
 const initialState: initialType = {
+  modalOpen: false,
   option: [],
   allBougu: bouguList,
-  dispBougu: [],
+  dispBougu: bouguKey,
 };
 
 export const bouguSlice = createSlice({
   name: "bougu",
   initialState,
   reducers: {
+    setModal(state) {
+      state.modalOpen = !state.modalOpen;
+    },
     optionChange(state, action: PayloadAction<bouguKind>) {
       const index = state.option.findIndex(i => i === action.payload);
       const newArray =
@@ -53,7 +59,8 @@ export const bouguSlice = createSlice({
   },
 });
 
-export const { filterBougu, optionChange } = bouguSlice.actions;
+export const { filterBougu, optionChange, setModal } = bouguSlice.actions;
+export const selectModal = (state: RootState) => state.bougu.modalOpen;
 export const selectBougu = (state: RootState) => state.bougu.option;
 export const selectBouguAll = (state: RootState) => state.bougu.allBougu;
 export const filterBouguAll = (state: RootState) => state.bougu.dispBougu;

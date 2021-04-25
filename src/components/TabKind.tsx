@@ -28,9 +28,9 @@ const TabKind = () => {
   return (
     <>
       <div className="flex w-screen">
-        <div className=" flex-col flex md:flex-row md:overflow-auto overflow-hidden ">
+        <div className=" flex-col flex md:flex-row md:overflow-auto overflow-hidden md:w-full ">
           <ul
-            className="flex overflow-x-scroll flex-row md:flex-col w-max  flex-nowrap  md:h-screen md:space-y-4 space-y-0"
+            className="flex flex-row md:flex-col md:max-w-min flex-nowrap  md:h-screen md:space-y-4 space-y-0"
             role="tablist">
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
@@ -45,7 +45,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link1"
                 role="tablist">
-                頭
+                頭:{dispAtamaSelector.length}
               </a>
             </li>
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
@@ -61,7 +61,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link2"
                 role="tablist">
-                たて
+                たて:{dispTateSelector.length}
               </a>
             </li>
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
@@ -77,7 +77,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link5"
                 role="tablist">
-                鎧下
+                鎧下:{dispYoroiSitaSelector.length}
               </a>
             </li>
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
@@ -93,7 +93,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link4"
                 role="tablist">
-                鎧上
+                鎧上:{dispYoroiUeSelector.length}
               </a>
             </li>
             <li className=" min-w-max p-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
@@ -109,7 +109,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link6"
                 role="tablist">
-                アクセサリー
+                アクセサリー:{dispAcuseSelector.length}
               </a>
             </li>
           </ul>
