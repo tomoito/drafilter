@@ -83,6 +83,14 @@ const FilterItem_zokusei_up: bouguKind[] = [
   "ガード率",
 ];
 
+const FilterItem_hp_increase: bouguKind[] = [
+  "ターン開始時にHPを5回復する",
+  "ターン開始時にHPを3回復する",
+  "ターン開始時HPを3回復する",
+  "ターン開始時MPを2回復する",
+  "ターン開始時HPを1回復する",
+];
+
 const FilterItem_test2: bouguKind[] = [
   "暴嵐の四天王への耐性",
   "【スパスタ】とくぎHP回復効果",
@@ -132,6 +140,9 @@ const Filter = () => {
       </div>
       <div className=" mb-1">
         <FilterItem title={FilterItem_zokusei_up} />
+      </div>
+      <div className=" mb-1">
+        <FilterItem title={FilterItem_hp_increase} />
       </div>
 
       <div className="flex space-x-1">
