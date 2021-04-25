@@ -22,13 +22,17 @@ export default function Modal(props: Props) {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    {Object.keys(props.showInfo.option).map(i => (
-                      <div>
-                        <span>{i}</span>
-                        <span>{props.showInfo.option[i]}</span>
-                      </div>
-                    ))}
+                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed font-semibold">
+                    <ul className=" bg-gray-700 rounded-lg text-white p-4">
+                      {Object.keys(props.showInfo.option).map(i => (
+                        <li>
+                          <span>{i}</span>
+                          <span>{"  "} +</span>
+                          <span>{props.showInfo.option[i]}</span>
+                          <span></span>
+                        </li>
+                      ))}
+                    </ul>
                   </p>
                 </div>
                 {/*footer*/}
