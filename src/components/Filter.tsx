@@ -74,6 +74,13 @@ const FilterItem_zokusei_up: bouguKind[] = [
   "バギ属性とくぎダメージ",
   "バギ属性じゅもんダメージ",
   "バギ属性耐性",
+  "ヒャド属性じゅもんダメージ",
+  "ヒャド属性耐性",
+  "ジバリア属性耐性",
+  "ドルマ属性耐性",
+  "ドルマ属性とくぎダメージ",
+  "ギラ属性耐性",
+  "ガード率",
 ];
 
 const FilterItem_test2: bouguKind[] = [
@@ -124,7 +131,7 @@ const Filter = () => {
         <FilterItem title={FilterItem_joutaiijou_taisei} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={FilterItem_test2} />
+        <FilterItem title={FilterItem_zokusei_up} />
       </div>
 
       <div className="flex space-x-1">
