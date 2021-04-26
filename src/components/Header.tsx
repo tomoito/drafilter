@@ -21,7 +21,7 @@ const Header = () => {
 
         {/* RIGHT HEADER */}
         <div className="flex">
-          <ul className="flex items-center space-x-3 mx-5 text-white font-semibold">
+          <ul className="flex text-xs md:text-base items-center space-x-3 mx-5 text-white font-semibold">
             <li>
               <p>お問い合わせ</p>
             </li>

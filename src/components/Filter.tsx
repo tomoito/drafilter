@@ -93,7 +93,7 @@ const FilterItem_hp_increase: bouguKind[] = [
 
 const FilterItem_test2: bouguKind[] = [
   "暴嵐の四天王への耐性",
-  "【スパスタ】とくぎHP回復効果",
+  "アンドレアルへの耐性",
   "【レンジャー】スキルの体技ダメージ",
   "※確認でき次第掲載予定です",
   "【パラディン】ターン開始時にHPを5回復する",
