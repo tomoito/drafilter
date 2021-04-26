@@ -115,9 +115,9 @@ const Filter = () => {
 
   return (
     <div className="w-screen bg-green-400 p-10 overflow-hidden ">
-      <div className="items-center text-center justify-items-center">
+      <div className="items-center text-center justify-items-center mb-3">
         <p className="text-white md:text-3xl text-sm font-semibold items-center bg-gra">
-          こころ、防具、アクセサリーの特殊効果をフィルタリングします。
+          防具、アクセサリーの特殊効果をフィルタリングします。
         </p>
       </div>
       <div className=" mb-1">

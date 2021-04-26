@@ -12,8 +12,8 @@ const Header = () => {
       <div className="flex flex-row justify-between">
         {/* LEFT HEADER */}
         <div className="flex mx-4 my-5 items-center">
-          <div className="h-10 w-10 rounded-full bg-gray-100 border border-white"></div>
-          <p className=" font-sans md:text-2xl text-white text-xs">
+          {/* <div className="h-10 w-10 rounded-full bg-gray-100 border border-white"></div> */}
+          <p className=" font-sans md:text-2xl text-white text-xs font-semibold">
             ドラクエウォーク検索システム
           </p>
         </div>
