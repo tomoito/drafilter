@@ -30,12 +30,12 @@ const TabKind = () => {
       <div className="flex w-screen">
         <div className=" flex-col flex md:flex-row md:overflow-auto overflow-hidden md:w-full ">
           <ul
-            className="flex flex-row md:flex-col md:max-w-min flex-nowrap overflow-scroll md:w-full  md:h-screen md:space-y-4 space-y-0"
+            className="flex whitespace-nowrap md:max-w-min flex-row md:flex-col  flex-nowrap overflow-scroll md:w-full md:mx-2  md:h-screen md:space-y-4 space-y-0"
             role="tablist">
             <li className="w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-xs cursor-pointer " +
+                  "p-3 font-bold text-xs md:text-base cursor-pointer " +
                   (openTab === 1 ? "text-white bg-green-400" : "text-black bg-white")
                 }
                 onClick={e => {
@@ -51,7 +51,7 @@ const TabKind = () => {
             <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-xs cursor-pointer" +
+                  "p-3 font-bold text-xs md:text-base cursor-pointer" +
                   (openTab === 2 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -67,7 +67,7 @@ const TabKind = () => {
             <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-xs cursor-pointer" +
+                  "p-3 font-bold md:text-base text-xs cursor-pointer whitespace-nowrap" +
                   (openTab === 5 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -83,7 +83,7 @@ const TabKind = () => {
             <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-xs   " +
+                  "p-3 font-bold md:text-base text-xs  whitespace-nowrap  " +
                   (openTab === 4 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -99,7 +99,7 @@ const TabKind = () => {
             <li className=" w-20 py-3 font-bold text-base  hover:border-b-4 text-gray-700 hover:text-green-800 cursor-pointer">
               <a
                 className={
-                  "p-3 font-bold text-xs cursor-pointer" +
+                  "p-3 font-bold md:text-base text-xs cursor-pointer whitespace-nowrap" +
                   (openTab === 6 ? "text-white bg-green-400" : " text-black bg-white")
                 }
                 onClick={e => {
@@ -109,7 +109,7 @@ const TabKind = () => {
                 data-toggle="tab"
                 href="#link6"
                 role="tablist">
-                アクセ:{dispAcuseSelector.length}
+                アク:{dispAcuseSelector.length}
               </a>
             </li>
           </ul>

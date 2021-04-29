@@ -25,9 +25,6 @@ const Header = () => {
             <li>
               <p>お問い合わせ</p>
             </li>
-            <li>
-              <p>お知らせ</p>
-            </li>
           </ul>
         </div>
         {/* END RIGHT HEADER */}

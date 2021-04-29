@@ -15,10 +15,28 @@ const Filter_status: bouguKind[] = [
   "さいだいHP",
   "さいだいMP",
   "【バトマス】スキルの斬撃ダメージ",
-  "【パラディン】守備力",
+  "【バトマス】きようさ",
+  "【バトマス】さいだいHP",
+  "【バトマス】守備力",
+  "【レンジャー】攻撃力",
   "【レンジャー】スキルの体技ダメージ",
+  "【レンジャー】守備力",
   "【賢者】とくぎHP回復効果",
   "【賢者】スキルHP回復効果",
+  "【スパスタ】とくぎHP回復効果",
+  "【スパスタ】スキルの体技ダメージ",
+  "【パラディン】かいふく魔力",
+  "【パラディン】さいだいHP",
+  "【パラディン】じゅもんHP回復効果",
+  "【パラディン】とくぎHP回復効果",
+  "【パラディン】守備力",
+  "【海賊】スキルの斬撃ダメージ",
+  "【海賊】守備力",
+  "【魔法使い】さいだいHP",
+  "【魔法戦士】こうげき魔力",
+  "【魔法戦士】ギラ属性ダメージ",
+  "【魔法戦士】デイン属性ダメージ",
+  "【魔法戦士】バギ属性ダメージ",
 ];
 
 const Filter_zokusei_attack: bouguKind[] = [
@@ -46,7 +64,6 @@ const FilterItem_bougu: bouguKind[] = [
   "攻撃魔力",
   "究極エビルプリーストへの耐性",
 ];
-const FilterItem_test3: bouguKind[] = ["鳥系への耐性", "植物系への耐性", "ギラ属性耐性"];
 const FilterItem_joutaiijou_taisei: bouguKind[] = [
   "毒耐性",
   "封印耐性",
@@ -69,18 +86,26 @@ const FilterItem_zokusei_up: bouguKind[] = [
   "メラ属性ダメージ",
   "メラ属性とくぎダメージ",
   "メラ属性じゅもんダメージ",
-  "メラ属性耐性",
+  "ヒャド属性じゅもんダメージ",
+  "ヒャド属性とくぎダメージ",
+  "ヒャド属性ダメージ",
   "バギ属性ダメージ",
   "バギ属性とくぎダメージ",
   "バギ属性じゅもんダメージ",
-  "バギ属性耐性",
-  "ヒャド属性じゅもんダメージ",
-  "ヒャド属性耐性",
-  "ジバリア属性耐性",
-  "ドルマ属性耐性",
   "ドルマ属性とくぎダメージ",
-  "ギラ属性耐性",
-  "ガード率",
+  "ドルマ属性じゅもんダメージ",
+  "ドルマ属性ダメージ",
+  "デイン属性じゅもんダメージ",
+  "デイン属性とくぎダメージ",
+  "デイン属性ダメージ",
+  "ジバリア属性とくぎダメージ",
+  "ジバリア属性ダメージ",
+  "イオ属性じゅもんダメージ",
+  "イオ属性とくぎダメージ",
+  "イオ属性ダメージ",
+  "ギラ属性じゅもんダメージ",
+  "ギラ属性とくぎダメージ",
+  "ギラ属性ダメージ",
 ];
 
 const FilterItem_hp_increase: bouguKind[] = [
@@ -91,16 +116,15 @@ const FilterItem_hp_increase: bouguKind[] = [
   "ターン開始時HPを1回復する",
 ];
 
-const FilterItem_test2: bouguKind[] = [
-  "暴嵐の四天王への耐性",
-  "アンドレアルへの耐性",
-  "【レンジャー】スキルの体技ダメージ",
-  "※確認でき次第掲載予定です",
-  "【パラディン】ターン開始時にHPを5回復する",
-  "魔力の暴走率",
-  "さいだいHP",
-  "じゅもん耐性",
+const FilterItem_zokusei_taisei: bouguKind[] = [
+  "メラ属性耐性",
   "イオ属性耐性",
+  "ギラ属性耐性",
+  "ジバリア属性耐性",
+  "ヒャド属性耐性",
+  "バギ属性耐性",
+  "ドルマ属性耐性",
+  "デイン属性耐性",
 ];
 const FilterItem_color = ["赤", "青", "黄", "紫", "緑"];
 
@@ -116,8 +140,8 @@ const Filter = () => {
   return (
     <div className="w-screen bg-green-400 p-10 overflow-hidden ">
       <div className="items-center text-center justify-items-center mb-3">
-        <p className="text-white md:text-3xl text-sm font-semibold items-center bg-gra">
-          防具、アクセサリーの特殊効果をフィルタリングします。
+        <p className="text-white md:text-3xl text-sm font-semibold items-center">
+          防具の特殊効果をフィルタリングします。
         </p>
       </div>
       <div className=" mb-1">
@@ -127,20 +151,18 @@ const Filter = () => {
         <FilterItem title={Filter_zokusei_taisei} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={Filter_status} />
+        <FilterItem title={FilterItem_zokusei_taisei} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={Filter_zokusei_attack} />
-      </div>
-      <div className=" mb-1">
-        <FilterItem title={Filter_zokusei_taisei} />
+        <FilterItem title={FilterItem_zokusei_up} />
       </div>
       <div className=" mb-1">
         <FilterItem title={FilterItem_joutaiijou_taisei} />
       </div>
       <div className=" mb-1">
-        <FilterItem title={FilterItem_zokusei_up} />
+        <FilterItem title={Filter_status} />
       </div>
+
       <div className=" mb-1">
         <FilterItem title={FilterItem_hp_increase} />
       </div>

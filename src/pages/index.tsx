@@ -26,7 +26,6 @@ export default function Home() {
 
         {/* BODY */}
         <TabKind />
-        <div className=""></div>
 
         {/* BODY NAV */}
         {/* END BODY NAV */}
