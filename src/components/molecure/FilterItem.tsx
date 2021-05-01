@@ -15,7 +15,7 @@ const FilterItem: React.FC<Props> = ({ title }) => {
     dispatch(filterBougu());
   };
   return (
-    <div className="overflow-x-scroll flex w-screen space-x-3 whitespace-nowrap  items-center">
+    <div className=" scrollbar-hide overflow-x-scroll flex w-screen space-x-3 whitespace-nowrap  items-center">
       {title.map(i => (
         <div
           key={i}
