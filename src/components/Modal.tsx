@@ -1,16 +1,20 @@
 import React from "react";
 import { bougu } from "models";
+import { selectModal } from "features/bouguSlice";
+import { useSelector } from "react-redux";
+
 type Props = {
-  showModal: boolean;
   showInfo: bougu;
   name: string;
   handleChangeBase: (e: boolean) => void;
 };
 
 export default function Modal(props: Props) {
+  const modalOpen = useSelector(selectModal);
+
   return (
     <>
-      {props.showModal ? (
+      {modalOpen && props.showInfo ? (
         <>
           <div
             className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
@@ -21,13 +25,14 @@ export default function Modal(props: Props) {
                 <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white ">
                   {/*header*/}
                   <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                    <h3 className="text-3xl font-semibold">{props.showInfo.name}</h3>
+                    <h3 className="text-3xl font-semibold">{props.showInfo?.name}</h3>
                   </div>
                   {/*body*/}
                   <div className="relative p-6 flex-auto">
                     <p className="my-4 text-blueGray-500 text-lg leading-relaxed font-semibold">
                       <ul className=" bg-gray-700 rounded-lg text-white p-4">
-                        {Object.keys(props.showInfo.option).map(i => (
+                        {/* {props.showInfo?.option[2]} */}
+                        {Object.keys(props.showInfo?.option).map(i => (
                           <li>
                             <span>{i}</span>
                             <span>{"  "} +</span>

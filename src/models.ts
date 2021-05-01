@@ -2,7 +2,7 @@ import DataSolo from "../public/images/Testdata/DataSolo.json";
 
 // アクセサリー
 import AcuseData from "../public/images/Testdata/akuse_solo.json";
-import bouguData from "../public/images/Testdata/bougu_solo_kai.json";
+import bouguData from "../public/images/Testdata/bougu_solo_kai3.json";
 
 type status = typeof DataSolo;
 //color

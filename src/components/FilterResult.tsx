@@ -42,7 +42,6 @@ const FilterResult: React.FC<Props> = ({ title, title2, pic_folder }) => {
         <Modal
           showInfo={bouguSelector[ModalArg]}
           name={bouguSelector[ModalArg]?.name}
-          showModal={modalIsOpen}
           handleChangeBase={() => disPatch(setModal())}
         />
       </div>
