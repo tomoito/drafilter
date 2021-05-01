@@ -75,7 +75,6 @@ const FilterItem_joutaiijou_taisei: bouguKind[] = [
   "混乱耐性",
   "怯え耐性",
   "幻惑耐性",
-  "封印耐性",
   "守備減耐性",
   "呪い耐性",
   "即死耐性",
